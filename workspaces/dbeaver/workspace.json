@@ -1,0 +1,14 @@
+{
+  "description": "",
+  "docker_registry": "https://ghcr.io/",
+  "image_src": "dbeaver.png",
+  "name": "ghcr.io/jrm0020/dbeaver:latest",
+  "friendly_name": "dbeaver",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    "1.13.x",
+    "1.14.x"
+  ]
+}
