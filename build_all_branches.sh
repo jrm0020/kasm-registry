@@ -9,9 +9,7 @@ EOF
 touch base/.nojekyll
 
 # Generating documentation for each other branch in a subdirectory
-echo "All branches:"
 git fetch --all
-echo "$(git branch --remotes --format '%(refname:lstrip=3)' | grep -Ev '^(HEAD|develop|gh-pages)$')"
 for BRANCH in $(git branch --remotes --format '%(refname:lstrip=3)' | grep -Ev '^(HEAD|develop|gh-pages)$'); do
     SANITIZED_BRANCH="$(echo $BRANCH | sed 's/\//_/g')"
     echo "$SANITIZED_BRANCH" >> base/versions.txt
